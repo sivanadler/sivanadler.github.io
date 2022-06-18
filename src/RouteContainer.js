@@ -1,25 +1,23 @@
 import AboutPage from './sections/AboutPage'
 import HomePage from './sections/HomePage'
-import { Route, Switch } from 'react-router-dom'
-import Nav from './common/Nav'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
 function RouteContainer(){
+
     return (
         <div>
-            <Nav />
             <Switch>
-                <Route path="/" render={ (routerProps) => {
+                <Route exact path="/" render={ (routerProps) => {
                     document.title = `Sivan Adler`
                     return <HomePage {...routerProps}/>
                 }} />
-                <Route path="/about" render={ (routerProps) => {
+                <Route exact path="/about" render={ (routerProps) => {
                     document.title = `Sivan Adler - About`
                     return <AboutPage {...routerProps}/>
                 }} />
-
             </Switch>
         </div>
     )
 }
 
-export default RouteContainer
+export default withRouter(RouteContainer)
