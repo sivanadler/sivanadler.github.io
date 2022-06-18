@@ -1,0 +1,99 @@
+/* INITIAL SETUP */
+#left-col {
+    width: 25% !important;
+    background-color: #aaa;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    border-left: 1px solid #ebebeb;
+    min-height: 100vh;
+}
+
+#right-col {
+    width: 75% !important;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    border-left: 1px solid #ebebeb;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+}
+
+
+#background-wave {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+
+/* HOME */
+.home-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0 5%;
+    text-align: center !important;
+    height: 300px !important;
+}
+
+.my-details {
+    vertical-align: middle !important;
+    position: relative; 
+    top: 30%;
+    text-align: left;
+}
+
+#avatar-col {
+    height: 300px;
+    width: 200px !important;
+}
+
+.avatar {
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    border-radius: 100%;
+    margin: 0 5% !important;
+    text-align: left;
+}
+
+.avatar-img {
+    background-image: url('../images/sivan.jpg') !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* NAV */
+.nav-list {
+
+    /* transform: translate(-50%, -50%); */
+}
+
+.nav-list-item {
+    list-style: none;
+    text-align: left;
+    font-size: 20px;
+}
+
+.nav-list-item span {
+    padding-left: 5% !important;
+}
