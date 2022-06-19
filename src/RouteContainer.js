@@ -7,13 +7,14 @@ function RouteContainer(){
     return (
         <div>
             <Switch>
-                <Route exact path="/" render={ (routerProps) => {
-                    document.title = `Sivan Adler`
-                    return <HomePage {...routerProps}/>
-                }} />
+ 
                 <Route exact path="/about" render={ (routerProps) => {
                     document.title = `Sivan Adler - About`
                     return <AboutPage {...routerProps}/>
+                }} />
+                <Route exact path="/" render={ (routerProps) => {
+                    document.title = `Sivan Adler`
+                    return <HomePage {...routerProps}/>
                 }} />
             </Switch>
         </div>

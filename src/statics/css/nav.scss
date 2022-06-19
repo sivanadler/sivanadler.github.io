@@ -1,0 +1,126 @@
+@use "./colors.scss";
+@use "./breakpoints.scss";
+
+/* NAV */
+.nav-list {
+    color: white;
+    display: block;
+    // margin: 0;
+    // text-align: center !important;
+    // z-index: 2000 !important;
+    // height: 100vh;
+    margin: 50% 0;
+
+    a.inactive {
+        width: 100% !important;
+        text-align: left;
+        font-size: 2vw;
+        color: colors.$inactive-link !important;
+        text-decoration: none;
+        transition: all ease-in-out .2s;
+    }
+
+    a.active {
+        width: 100% !important;
+        text-align: left;
+        font-size: 2vw;
+        color: colors.$active-link !important;
+        text-decoration: none;
+        transition: all ease-in-out .2s;
+    }
+
+    svg {
+        margin-right: 10%;
+        font-size: 2vw;
+
+    }
+
+    a:before, a:after{
+        opacity: 0;
+        font-size: 35px;
+        margin: 0 5%;
+        top: 0px;
+        transition: all 0.3s;
+    }
+
+    a:before{
+        content: '{';
+        left: 0px;
+        transform: translateX(50px);
+    }
+
+    a:after{
+        content: '}';
+        right: 0px;
+        transform: translateX(-50px);
+    }
+
+    a.active:before {
+        visibility: hidden;
+    }
+    a.active:after {
+        visibility: hidden;
+    }
+
+    a:hover:before, a:hover:after{
+        opacity: 1;
+        transform: translateX(10px);
+    }
+
+    // .nav-list-item span {
+    //     padding-left: 5% !important;
+    // }
+    
+    
+}
+
+.flex-column.justify-content-end.navbar-nav {
+    background-color: colors.$darker-gray;
+    width: 100% !important;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    color: rgba(0,0,0,0)
+}
+
+.navbar-light .navbar-toggler.collapsed {
+    border-color: colors.$darker-gray;
+    outline: 0 !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    transition: none !important;
+
+}
+.navbar-light .navbar-toggler.collapsed:focus {
+    border: 0 !important;
+    outline: none !important;
+    background: none !important;
+    box-shadow: 0 0 0 0rem !important;
+}
+
+
+@media (max-width: breakpoints.$tablet) {
+    .nav-list {
+        width: 100% !important;
+        height: auto !important;
+        text-align: right;
+        margin: 1% 0 !important;
+        padding-bottom: 5% !important;
+
+        a.active, a.inactive{
+            font-size: 3vw !important;
+            text-align: center !important;
+            margin: 0;
+        }
+    }
+
+    a:before, a:after{
+        opacity: 0;
+        font-size: 25px;
+        margin: 0 5%;
+        top: 0px;
+        transition: all 0.3s;
+    }
+}

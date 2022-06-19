@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import RouteContainer from './RouteContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserHistory } from 'history';
-import Nav from './common/Nav'
+import Navigation from './common/Nav'
 import './statics/css/home.scss'
 import { Container, Row, Col } from 'react-bootstrap'
 import Footer from "./common/Footer";
@@ -18,11 +18,11 @@ root.render(
   <React.StrictMode>
     <Router history={historyInstance}>
       <Container fluid>
-        <Row >
-          <Col id="left-col">
-            <Nav />
+        <Row id="main-row">
+          <Col xs={12} id="left-col">
+            <Navigation />
           </Col>
-          <Col xs={6} id="right-col">
+          <Col xs={12} id="right-col">
             <RouteContainer/>
             <Footer/>
           </Col>
