@@ -66,6 +66,7 @@
     font-size: 1vw;
 }
 
+
 /* HOME */
 .home-details {
     position: absolute;
@@ -93,6 +94,10 @@
         font-size: 1.5vw;
         color: colors.$darker-gray;
     }
+
+    #smaller {
+        font-size: 1vw;
+    }
 }
 
 #avatar-col {
@@ -102,25 +107,64 @@
 }
 
 .avatar {
-    min-width: 80%;
-    min-height: 100%;
+    width: 80%;
+    height: 100%;
     position: relative;
-    border-radius: 100%;
+    // border-radius: 100%;
     margin: 0 5% !important;
     text-align: left;
 }
 
+@keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+    
+}
+
+@keyframes conic-gradient {
+    50% {
+        --angle: 0%;
+    }
+
+    85% {
+        --angle: 100%;
+    }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 10deg;
+  inherits: false;
+}
+
 .avatar-img {
+    position: absolute;
+    top: 4%;
+    bottom: 4%;
+    left: 4%;
+    right: 4%;
     background-image: url('../images/sivan.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 50%;
+    padding: 2% !important;
+}
+
+#gradient {
+    border-radius: 50%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    border-radius: 50%;
+    display: block;
+    --angle: 0deg;
+    background-image: conic-gradient(from var(--angle), colors.$light-pink, colors.$darker-pink, colors.$darkest-pink, #000, colors.$darkest-gray, colors.$darker-gray, colors.$inactive-link, colors.$active-link) !important;
+    animation: 5s rotate linear infinite;
+    will-change: transform, background-image;
+    box-shadow: 10px 6px 24px -7px rgba(0,0,0,0.51);
 }
 
 @media (max-width: breakpoints.$laptop-1250) {

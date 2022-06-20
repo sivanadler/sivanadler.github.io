@@ -12,13 +12,16 @@ function HomePage(props) {
             <Row className="home-details justify-content-md-center">
                 <Col id="avatar-col">
                     <div className="avatar">
-                        <div className="avatar-img"></div>
+                        <div id="gradient">
+                            <div className="avatar-img"></div>
+                        </div>
                     </div>
                 </Col>
                 <Col id="details-col">
                     <div className="my-details">
                         <h1>Sivan Adler</h1>
-                        <p>Software Engineer with an eye for design</p>
+                        <p>Software Engineer with an eye and passion for design</p>
+                        <p id="smaller">NYC Native | Israeli American | Foodie | Dog Lover | Studio Artist</p>
                     </div>
                 </Col>
             </Row>
