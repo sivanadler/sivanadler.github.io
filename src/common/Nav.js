@@ -19,57 +19,55 @@ function Navigation(props){
     }, [])
 
     return(
-        <div>
-            <Navbar expand="md" collapseOnSelect className="nav-list">
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="flex-column justify-content-end">
-                        <NavLink 
-                            onClick={() => handleClick('/')} 
-                            exact to ={'/'} 
-                            className={activeLink === "/" ? 'active' : 'inactive'}
-                        >
-                            {/* <FaUser />{'   '}  */}
-                            Home
+        <Navbar expand="md" collapseOnSelect className="nav-list">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="flex-column justify-content-end">
+                    <NavLink 
+                        onClick={() => handleClick('/')} 
+                        exact to ={'/'} 
+                        className={activeLink === "/" ? 'active' : 'inactive'}
+                    >
+                        {/* <FaUser />{'   '}  */}
+                        Home
 
-                        </NavLink>
-                        <NavLink 
-                            onClick={() => handleClick('/about')} 
-                            exact to ={'/about'} 
-                            className={activeLink === "/about" ? 'active' : 'inactive'}
-                        >
-                            {/* <FaUser />{'   '}  */}
-                            About
-                        </NavLink>
-                        <NavLink
-                            onClick={() => handleClick('/experience')} 
-                            exact to ={'/experience'} 
-                            className={activeLink === '/experience' ? 'active' : 'inactive'}
-                        >
-                            {/* <FaListAlt />{'   '}  */}
-                            Experience
-                        </NavLink>
-                        <NavLink
-                            onClick={() => handleClick('/skills')}
-                            exact to={'/skills'}
-                            className={activeLink === '/skills' ? 'active' : 'inactive'}
-                        >
-                            {/* <FaLightbulb/>{'   '}  */}
-                            Skills
-                        </NavLink>
-                        <NavLink
-                            onClick={() => handleClick('/contact')}
-                            exact to={'/contact'}
-                            className={activeLink === '/contact' ? 'active' : 'inactive'}
-                        >
-                            {/* <FaAddressCard/>{'   '}  */}
-                            Contact
-                        </NavLink>
-                        <br/>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        </div>    
+                    </NavLink>
+                    <NavLink 
+                        onClick={() => handleClick('/about')} 
+                        exact to ={'/about'} 
+                        className={activeLink === "/about" ? 'active' : 'inactive'}
+                    >
+                        {/* <FaUser />{'   '}  */}
+                        About
+                    </NavLink>
+                    <NavLink
+                        onClick={() => handleClick('/experience')} 
+                        exact to ={'/experience'} 
+                        className={activeLink === '/experience' ? 'active' : 'inactive'}
+                    >
+                        {/* <FaListAlt />{'   '}  */}
+                        Experience
+                    </NavLink>
+                    <NavLink
+                        onClick={() => handleClick('/skills')}
+                        exact to={'/skills'}
+                        className={activeLink === '/skills' ? 'active' : 'inactive'}
+                    >
+                        {/* <FaLightbulb/>{'   '}  */}
+                        Skills
+                    </NavLink>
+                    <NavLink
+                        onClick={() => handleClick('/contact')}
+                        exact to={'/contact'}
+                        className={activeLink === '/contact' ? 'active' : 'inactive'}
+                    >
+                        {/* <FaAddressCard/>{'   '}  */}
+                        Contact
+                    </NavLink>
+                    <br/>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 
