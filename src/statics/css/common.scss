@@ -1,0 +1,34 @@
+@use "./colors.scss";
+@use "./breakpoints.scss";
+
+.header {
+    font-size: 50px;
+    margin-bottom: 2%;
+    color: colors.$darkest-gray;
+}
+
+.subheader {
+    font-size: 25px;
+    color: colors.$darkest-gray;
+    font-weight: bold;
+}
+
+@media (max-width:breakpoints.$tablet) {
+   .header {
+       font-size: 45px;
+   }
+
+   .subheader {
+       font-size: 20px;
+   }
+}
+
+@media (max-width:breakpoints.$phone) {
+    .header {
+        font-size: 30px !important;
+    }
+
+    .subheader {
+        font-size: 18px !important;
+    }
+}

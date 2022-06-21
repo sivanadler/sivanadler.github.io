@@ -238,6 +238,12 @@
     }
 }
 
+@media (max-width: breakpoints.$laptop-850) {
+    #gradient {
+        width: 60%;
+    }
+}
+
 
 @media (max-width: breakpoints.$tablet) {
     #main-row {
@@ -250,7 +256,6 @@
     #left-col {
         display: block !important;
         width: 100% !important; 
-        // background-color: colors.$darker-pink;
         height: 10vh !important;
     }
 
@@ -358,6 +363,10 @@
 }
 
 @media (max-width: breakpoints.$tablet-min) {
+    .home-details {
+        top: 45%;
+
+    }
     #gradient {
         position: relative;
         height: 100% !important;

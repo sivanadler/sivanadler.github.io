@@ -1,0 +1,63 @@
+@use "./colors.scss";
+@use "./breakpoints.scss";
+
+.about-details-container {
+    text-align: center;
+    padding: 5% 0;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif !important;
+}
+
+#about-me-desc {
+    text-align: justify;
+    width: 80%;
+    margin: 2% 10% 0 10%;
+    background-color: rgba(255,255,255,0.6);
+    padding: 3%;
+    border-radius: 10px;
+    font-weight: 500;
+    height: 500px !important;
+    overflow: scroll;
+    font-size: 16px;
+}
+
+.brackets {
+    font-size: 30px !important;
+}
+
+@media (max-width:breakpoints.$laptop-1000) {
+    #about-me-desc {
+        height: 525px !important;
+    }
+}
+
+@media (max-width:breakpoints.$tablet) {
+    #about-me-desc {
+        margin-top: 5% !important;
+        font-size: 14px !important;
+    }
+    
+    .brackets {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width:breakpoints.$tablet-min) {
+    .brackets {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width:breakpoints.$phone) {
+    #about-me-desc {
+        font-size: 12px;
+    }
+
+    .brackets {
+        font-size: 20px !important;
+    }
+}

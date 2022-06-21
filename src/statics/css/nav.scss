@@ -4,12 +4,16 @@
 /* NAV */
 .nav-list {
     color: white;
-    display: block;
-    margin: 50% 20%;
+    position: absolute;
+    left: 46%;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 
     a.inactive {
         width: 100% !important;
-        text-align: left;
         font-size: 2vw;
         color: colors.$inactive-link !important;
         text-decoration: none;
@@ -18,7 +22,6 @@
 
     a.active {
         width: 100% !important;
-        text-align: left;
         font-size: 2vw;
         color: colors.$active-link !important;
         text-decoration: none;
@@ -71,14 +74,21 @@
 .flex-column.justify-content-end.navbar-nav {
     background-color: colors.$darker-gray;
     width: 100% !important;
+    display: flex;
 }
 
 .navbar-light .navbar-toggler {
+    position: absolute;
+    right: 0 !important;
+    top: 0 !important;
     border: none;
     color: rgba(0,0,0,0)
 }
 
 .navbar-light .navbar-toggler.collapsed {
+    position: absolute;
+    right: 0 !important;
+    top: 0 !important;
     border-color: colors.$darker-gray;
     outline: 0 !important;
     border: none !important;
@@ -88,20 +98,34 @@
 
 }
 .navbar-light .navbar-toggler.collapsed:focus {
+    position: absolute;
+    right: 0 !important;
+    top: 0 !important;
     border: 0 !important;
     outline: none !important;
     background: none !important;
     box-shadow: 0 0 0 0rem !important;
 }
 
+@media (max-width: breakpoints.$laptop-1000){
+    .nav-list{
+        a.inactive, a.active {
+            font-size: 2.5vw !important;
+        }
+    }
+}
 
 @media (max-width: breakpoints.$tablet) {
-    .nav-list {
+    .navbar-collapse {
         width: 100% !important;
-        height: auto !important;
-        text-align: right;
+    }
+    .nav-list {
+        overflow-y: visible !important;
+        width: 100% !important;
+        height: 10vh;
+        position: absolute;
+        left: 50% !important;
         margin: 1% 0 !important;
-        padding-bottom: 5% !important;
 
         a.active, a.inactive{
             font-size: 3vw !important;

@@ -19,7 +19,7 @@ function Navigation(props){
     }, [])
 
     return(
-        <Navbar expand="md" collapseOnSelect className="nav-list">
+        <Navbar expand="sm" collapseOnSelect className="nav-list">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="flex-column justify-content-end">

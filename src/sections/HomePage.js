@@ -1,14 +1,13 @@
 import React from "react";
 import { Row, Col } from 'react-bootstrap'
 import '../statics/css/home.scss'
+import Wave from "../common/Wave";
 
 function HomePage(props) {
 
     return (
         <div className="home">
-            <svg id="background-wave" viewBox="20 5 425 1000" preserveAspectRatio="xMinYMin meet">
-                <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"></path>
-            </svg>
+            <Wave />
             <Row className="home-details">
                 <Row>
                     <Col id="avatar-col">
