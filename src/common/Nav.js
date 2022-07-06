@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { FaHome, FaUser, FaListAlt, FaLightbulb, FaAddressCard, FaAd } from 'react-icons/fa'
+import { FaHome, FaUser, FaListAlt, FaLightbulb, FaAddressCard } from 'react-icons/fa'
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar } from 'react-bootstrap'
 import '../statics/css/nav.scss'
@@ -10,6 +10,7 @@ function Navigation(props){
     const [activeLink, setActiveLink] = useState('')
 
     const handleClick = (path) => {
+        console.log(path)
         setActiveLink(path)
         window.location.replace(path)
     }
@@ -17,52 +18,51 @@ function Navigation(props){
     useEffect(() => {
        setActiveLink(window.location.pathname)
     }, [])
-
+    
     return(
-        <Navbar expand="sm" collapseOnSelect className="nav-list">
+        <Navbar expand="sm" collapseOnSelect className="nav-list animate__animated animate__slideInDown">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="flex-column justify-content-end">
+                <Nav className="justify-content-end">
                     <NavLink 
                         onClick={() => handleClick('/')} 
                         exact to ={'/'} 
                         className={activeLink === "/" ? 'active' : 'inactive'}
                     >
-                        {/* <FaUser />{'   '}  */}
                         Home
-
                     </NavLink>
+                    
                     <NavLink 
                         onClick={() => handleClick('/about')} 
                         exact to ={'/about'} 
                         className={activeLink === "/about" ? 'active' : 'inactive'}
                     >
-                        {/* <FaUser />{'   '}  */}
                         About
                     </NavLink>
-                    <NavLink
-                        onClick={() => handleClick('/experience')} 
-                        exact to ={'/experience'} 
-                        className={activeLink === '/experience' ? 'active' : 'inactive'}
-                    >
-                        {/* <FaListAlt />{'   '}  */}
-                        Experience
-                    </NavLink>
+
                     <NavLink
                         onClick={() => handleClick('/skills')}
                         exact to={'/skills'}
                         className={activeLink === '/skills' ? 'active' : 'inactive'}
                     >
-                        {/* <FaLightbulb/>{'   '}  */}
                         Skills
                     </NavLink>
+
+                    <NavLink
+                        onClick={() => handleClick('/experience')} 
+                        exact to ={'/experience'} 
+                        className={activeLink === '/experience' ? 'active' : 'inactive'}
+                    >
+                        
+                        Experience
+                    </NavLink>
+            
                     <NavLink
                         onClick={() => handleClick('/contact')}
                         exact to={'/contact'}
                         className={activeLink === '/contact' ? 'active' : 'inactive'}
                     >
-                        {/* <FaAddressCard/>{'   '}  */}
-                        Contact
+                       Contact
                     </NavLink>
                     <br/>
                 </Nav>

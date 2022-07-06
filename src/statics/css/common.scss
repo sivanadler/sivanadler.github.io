@@ -1,9 +1,57 @@
 @use "./colors.scss";
 @use "./breakpoints.scss";
 
+// merriweather,serif
+#main-container {
+    background-color: colors.$light-pink !important;
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+
+.container {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+#background-wave {
+    display: inline-block;
+    position: fixed;
+    top: -10%;
+    left: 0;  
+    padding: 0;
+    overflow: hidden;
+
+    path {
+        fill: colors.$darker-pink !important;
+        stroke: white !important;
+    }
+}
+
+.element {
+    text-align: center;
+    padding: 0;
+    width: 100vw !important;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif !important;
+    display: block !important;
+    z-index: 1000 !important;
+}
+
+.section-container {
+    margin: 1% 5%;
+    width: 100% !important;
+    text-align: center !important;
+}
+
 .header {
     font-size: 50px;
     margin-bottom: 2%;
+    text-align: left;
     color: colors.$darkest-gray;
 }
 
@@ -11,6 +59,19 @@
     font-size: 25px;
     color: colors.$darkest-gray;
     font-weight: bold;
+}
+
+#whitePane {
+    text-align: justify;
+    width: 80%;
+    margin: 2% 10% 0 10%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 3%;
+    border-radius: 10px;
+    font-weight: 500;
+    height: 500px !important;
+    overflow: scroll;
+    font-size: 16px;
 }
 
 @media (max-width:breakpoints.$tablet) {

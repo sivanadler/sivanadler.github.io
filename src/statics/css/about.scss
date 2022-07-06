@@ -1,63 +1,99 @@
 @use "./colors.scss";
 @use "./breakpoints.scss";
 
-.about-details-container {
-    text-align: center;
-    padding: 5% 0;
-    position: relative;
-    width: 100%;
-    float: left;
-    clear: both;
-    height: 100vh;
-    font-family: 'Roboto Slab', serif !important;
-}
-
-#about-me-desc {
-    text-align: justify;
-    width: 80%;
-    margin: 2% 10% 0 10%;
-    background-color: rgba(255,255,255,0.6);
-    padding: 3%;
-    border-radius: 10px;
-    font-weight: 500;
-    height: 500px !important;
-    overflow: scroll;
-    font-size: 16px;
-}
-
 .brackets {
     font-size: 30px !important;
 }
 
-@media (max-width:breakpoints.$laptop-1000) {
-    #about-me-desc {
-        height: 525px !important;
+#image-wrapper {
+    background-color: colors.$light-pink;
+    border: 5px solid colors.$darker-pink;
+    height: 55vh;
+    width: 325px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#about-img {
+    height: 55vh !important;
+    width: 325px;
+    box-shadow: 0 10px 30px -15px black;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    border: 0px;
+    transform: translate(-30px, -30px);
+
+}
+
+#about-img:hover{
+    transform: translate(-20px, -20px);
+}
+
+.hobbies-row {
+    padding: 0 0 2% 0;
+    width: 100%;
+
+    .col {
+        text-align: left;
+        font-size: 18px;
     }
 }
 
-@media (max-width:breakpoints.$tablet) {
-    #about-me-desc {
-        margin-top: 5% !important;
-        font-size: 14px !important;
-    }
+.about-icon-span {
+    margin-right: 5%;
+    font-size: 22px;
+}
+
+#about-me-desc {
+    margin-top: 2%;
+    width: 90%;
+    text-align: justify;
+    background-color: rgba(255,255,255, 0.7);
+    box-shadow: 0 10px 30px -15px colors.$darker-gray;
+    border-radius: 10px;
+    padding: 2%;
+    height: 300px;
+    overflow: scroll;
+}
+
+.strong {
+    color: colors.$accent;
+    font-weight: bolder;
+}
+
+
+
+// @media (max-width:breakpoints.$laptop-1000) {
+//     #about-me-desc {
+//         height: 525px !important;
+//     }
+// }
+
+// @media (max-width:breakpoints.$tablet) {
+//     #about-me-desc {
+//         margin-top: 5% !important;
+//         font-size: 14px !important;
+//     }
     
-    .brackets {
-        font-size: 25px !important;
-    }
-}
+//     .brackets {
+//         font-size: 25px !important;
+//     }
+// }
 
-@media (max-width:breakpoints.$tablet-min) {
-    .brackets {
-        font-size: 25px !important;
-    }
-}
+// @media (max-width:breakpoints.$tablet-min) {
+//     .brackets {
+//         font-size: 25px !important;
+//     }
+// }
 
-@media (max-width:breakpoints.$phone) {
-    #about-me-desc {
-        font-size: 12px;
-    }
+// @media (max-width:breakpoints.$phone) {
+//     #about-me-desc {
+//         font-size: 12px;
+//     }
 
-    .brackets {
-        font-size: 20px !important;
-    }
-}
+//     .brackets {
+//         font-size: 20px !important;
+//     }
+// }

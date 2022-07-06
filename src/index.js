@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import RouteContainer from './RouteContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserHistory } from 'history';
-import Navigation from './common/Nav'
-import './statics/css/home.scss'
-import { Container, Row, Col } from 'react-bootstrap'
-import Footer from "./common/Footer";
+import './statics/css/home.scss';
+import 'animate.css';
+import App from './App'
+import AboutPage from './sections/AboutPage';
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const historyInstance = createBrowserHistory({ forceRefresh: true });
@@ -17,17 +17,16 @@ const historyInstance = createBrowserHistory({ forceRefresh: true });
 root.render(
   <React.StrictMode>
     <Router history={historyInstance}>
-      <Container fluid>
-        <Row id="main-row">
-          <Col xs={12} id="left-col">
-            <Navigation />
-          </Col>
-          <Col xs={12} id="right-col">
-            <RouteContainer/>
-            <Footer/>
-          </Col>
-        </Row>
-      </Container>
+      <Switch>
+      <Route exact path="/" render={ (routerProps) => {
+          document.title = `Sivan Adler`
+          return <App {...routerProps}/>
+      }} />
+      <Route exact path="/about" render={ (routerProps) => {
+          document.title = `Sivan Adler - About`
+          return <AboutPage {...routerProps}/>
+      }} />
+      </Switch>
     </Router>
 
   </React.StrictMode>
