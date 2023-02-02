@@ -30,6 +30,8 @@
     transform: translate(-50%, -50%);
     width: 90%;
     margin: 0;
+    // z-index: 100 !important;
+
 }
 
 .my-details {
@@ -42,6 +44,7 @@
     text-align: left;
     font-family: 'Roboto Slab', serif;
     color: colors.$darkest-gray;
+    // z-index: 100 !important;
 
     h1 {
         font-size: 4vw;

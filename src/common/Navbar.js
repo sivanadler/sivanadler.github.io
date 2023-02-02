@@ -3,34 +3,36 @@ import "../statics/css/nav.scss"
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 function Navbar(){
-    
-    const scrollToTop = () => {
-        scroll.scrollToTop()
+
+    const handleClick = (e, element) => {
+         e.preventDefault();
+        const foundElement = document.querySelector(`#${element}`)
+        if(foundElement){
+            foundElement.scrollIntoView()
+        }
     }
 
 
     return (
-        <nav className="nav-list" role="navigation">
-            <ul>
-                <li className="main-nav-link">
+        <div className="nav-list" role="navigation">
                     <Link
                         activeClass="active"
+                        className="main-nav-link"
                         to="home"
-                        onClick={scrollToTop}
+                        onClick={(e) => handleClick(e, 'home')}
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={50}
                         duration={500}
                     >
                         <span className="nav-title"> Home </span>
                     </Link>
-                </li>
 
-                <li className="main-nav-link">
                     <Link
                         activeClass="active"
+                        className="main-nav-link"
                         to="about"
-                        onClick={scrollToTop}
+                        onClick={(e) => handleClick(e, 'about')}
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -38,13 +40,12 @@ function Navbar(){
                     >
                         <span className="nav-title"> About </span>
                     </Link>
-                </li>
 
-                <li className="main-nav-link">
                     <Link
                         activeClass="active"
+                        className="main-nav-link"
                         to="skills"
-                        onClick={scrollToTop}
+                        onClick={(e) => handleClick(e, 'skills')}
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -52,13 +53,12 @@ function Navbar(){
                     >
                         <span className="nav-title"> Skills </span>
                     </Link>
-                </li>
 
-                <li className="main-nav-link">
                     <Link
                         activeClass="active"
+                        className="main-nav-link"
                         to="experience"
-                        onClick={scrollToTop}
+                        onClick={(e) => handleClick(e, 'experience')}
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -66,13 +66,12 @@ function Navbar(){
                     >
                         <span className="nav-title"> Experience </span>
                     </Link>
-                </li>
 
-                <li className="main-nav-link">
                     <Link
                         activeClass="active"
+                        className="main-nav-link"
                         to="contact"
-                        onClick={scrollToTop}
+                        onClick={(e) => handleClick(e, 'contact')}
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -80,9 +79,7 @@ function Navbar(){
                     >
                         <span className="nav-title"> Contact </span>
                     </Link>
-                </li>
-            </ul>
-        </nav>
+        </div>
     )
 }
 

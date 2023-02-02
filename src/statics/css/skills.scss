@@ -2,26 +2,20 @@
 @use "./breakpoints.scss";
 
 .skills-row {
-    text-align: center;
-    color: colors.$darker-gray;
-    font-size: 24px !important;
     // margin-bottom: 3% !important;
-    margin: 0 0 3% 0 !important;
+    margin: 0 5% 3% 5% !important;
     width: 100%;
-    text-align: center;
+
+    li {
+        margin-bottom: 2%;
+    }
 }
 
 .skills-header {
     font-size: 20px !important;
-    text-align: center;
+    color: colors.$darker-gray;
+    font-size: 24px !important;
     font-weight: bold;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
-.skills-text {
-    font-size: 12px;
-    padding-top: 2%;
-    padding-bottom: 5%;
-    font-weight: bolder;
-    text-align: center;  
-}

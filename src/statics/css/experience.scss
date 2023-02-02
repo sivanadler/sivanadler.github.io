@@ -1,0 +1,34 @@
+@use "./colors.scss";
+@use "./breakpoints.scss";
+
+.experience-header {
+    color: colors.$darkest-gray;
+    font-weight: bold;
+}
+
+.experience-subheader {
+    color: colors.$darker-gray;
+    font-weight: bold;
+}
+
+.date-to-float {
+    float: right;
+    color: colors.$darker-gray;
+    font-weight: bold;
+}
+
+.experience-header-row {
+}
+
+.experience-bullet-row {
+
+    ul {
+        margin-left: 5%;
+        width: 95%;
+    }
+
+    a {
+        color: colors.$accent;
+        font-weight: bold;
+    }
+}

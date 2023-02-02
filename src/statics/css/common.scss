@@ -2,6 +2,12 @@
 @use "./breakpoints.scss";
 
 // merriweather,serif
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 #main-container {
     background-color: colors.$light-pink !important;
     height: 100vh !important;
@@ -39,13 +45,13 @@
     height: 100vh;
     font-family: 'Roboto Slab', serif !important;
     display: block !important;
-    z-index: 1000 !important;
 }
 
 .section-container {
-    margin: 1% 5%;
+    margin: 8% 5% 1% 5%;
     width: 100% !important;
     text-align: center !important;
+    scroll-behavior: smooth !important;
 }
 
 .header {
@@ -63,13 +69,12 @@
 
 #whitePane {
     text-align: justify;
-    width: 80%;
-    margin: 2% 10% 0 10%;
+    width: 90%;
     background-color: rgba(255,255,255,0.8);
     padding: 3%;
     border-radius: 10px;
     font-weight: 500;
-    height: 500px !important;
+    max-height: 500px !important;
     overflow: scroll;
     font-size: 16px;
 }
