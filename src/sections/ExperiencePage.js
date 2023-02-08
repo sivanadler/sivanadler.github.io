@@ -38,7 +38,7 @@ function ExperiencePage() {
                     <li>Rebuilt <a href="https://www.genesisrg.com/" target="_blank" rel="noreferrer">company website</a> in React, working with biomedical experts and company executives to produce a website that enhanced the company brand.</li>
                     <li>Developed a full stack admin tool with a React frontend and Python (Django) backend, </li>
                     <li>Redesigned routing from a simple single page app into a multi-page product to streamline user experience based on client feedback. </li>
-                    <li>Handled deployment of full stack applications using AWS services, including S3, CloudFront, Elastic Beanstalk, Route 53, and RDS.</li>
+                    <li>Handled deployment of full stack applications using AWS services, including S3, CI/CD, CloudFront, Elastic Beanstalk, Route 53, and RDS.</li>
                     <li>Maintained multiple MySQL databases and created complex database structures based on product specs.</li>
                 </ul>
             </Row>
