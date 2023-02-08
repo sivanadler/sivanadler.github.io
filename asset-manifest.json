@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4807d2ab.css",
+    "main.js": "/static/js/main.697c007f.js",
+    "static/js/787.dce5a9bd.chunk.js": "/static/js/787.dce5a9bd.chunk.js",
+    "static/media/sivan_adler.jpg": "/static/media/sivan_adler.6603ccec8ea53dc5c386.jpg",
+    "static/media/sivan.jpg": "/static/media/sivan.c700818ece92863abf92.jpg",
+    "index.html": "/index.html",
+    "main.4807d2ab.css.map": "/static/css/main.4807d2ab.css.map",
+    "main.697c007f.js.map": "/static/js/main.697c007f.js.map",
+    "787.dce5a9bd.chunk.js.map": "/static/js/787.dce5a9bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4807d2ab.css",
+    "static/js/main.697c007f.js"
+  ]
+}
