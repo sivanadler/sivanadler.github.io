@@ -67,7 +67,7 @@ function Navbar(){
                         <span className="nav-title"> Experience </span>
                     </Link>
 
-                    <Link
+                    {/* <Link
                         activeClass="active"
                         className="main-nav-link"
                         to="contact"
@@ -78,7 +78,7 @@ function Navbar(){
                         duration={500}
                     >
                         <span className="nav-title"> Contact </span>
-                    </Link>
+                    </Link> */}
         </div>
     )
 }
