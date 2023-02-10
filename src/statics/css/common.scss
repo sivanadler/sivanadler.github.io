@@ -77,16 +77,46 @@ html, body {
     max-height: 500px !important;
     overflow: scroll;
     font-size: 16px;
+    box-shadow: 10px 10px 56px -26px rgba(0,0,0,0.55);
+
 }
 
-@media (max-width:breakpoints.$tablet) {
-   .header {
-       font-size: 45px;
-   }
+@media (max-width: breakpoints.$laptop-1200) {
+    #background-wave {
+        top: -5%;
+    }
+}
 
-   .subheader {
-       font-size: 20px;
-   }
+@media (max-width: breakpoints.$laptop-1050) {
+    #background-wave {
+        top: 3%;
+    }
+}
+
+@media (max-width: breakpoints.$laptop-1000) {
+    #background-wave {
+        top: 8%;
+    }
+}
+
+@media (max-width: breakpoints.$laptop-850) {
+    #background-wave {
+        top: 10%;
+    }  
+}
+
+@media (max-width:breakpoints.$tablet) {    
+    .header {
+        font-size: 45px;
+    }
+
+    .subheader {
+        font-size: 20px;
+    }
+
+    #background-wave {
+        // top: 15%;
+    }  
 }
 
 @media (max-width:breakpoints.$phone) {

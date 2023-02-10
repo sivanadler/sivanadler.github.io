@@ -12,6 +12,7 @@ import {
 import { MdPlace } from "react-icons/md";
 
 function AboutPage(props) {
+
   const content = (
     <p id="about-me-desc">
       Hello! My name is Sivan and I enjoy building and designing Web
@@ -33,6 +34,7 @@ function AboutPage(props) {
     </p>
   );
   return (
+    <div className="about">
     <div className="section-container">
       <Row className="animate__animated animate__slideInLeft animate__slower">
         <Col className="header"> {'[  '}About Me{'  ]'}</Col>
@@ -82,6 +84,7 @@ function AboutPage(props) {
           </div>
         </Col>
       </Row>
+    </div>
     </div>
   );
 }

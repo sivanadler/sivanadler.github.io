@@ -1,45 +1,55 @@
+import React, { useEffect, Suspense, lazy } from 'react';
 import './App.css';
-import { Row, Col } from 'react-bootstrap'
+import { ClipLoader } from 'react-spinners';
 import Footer from "./common/Footer";
 import Navbar from './common/Navbar'
 import Wave from './common/Wave';
 import "./statics/css/common.scss"
-import { Element } from 'react-scroll'
-import HomePage from './sections/HomePage';
-import AboutPage from './sections/AboutPage';
-import SkillsPage from './sections/SkillsPage';
-import ExperiencePage from './sections/ExperiencePage';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import useWindowSize from "./helpers/useWindowSize";
+
+const HomePage = lazy(() => import("./sections/HomePage"));
+const AboutPage = lazy(() => import("./sections/AboutPage"));
+const SkillsPage = lazy(() => import("./sections/SkillsPage"));
+const ExperiencePage = lazy(() => import("./sections/ExperiencePage"));
+const EducationPage = lazy(() => import("./sections/EducationPage"));
+const ContactPage = lazy(() => import("./sections/ContactPage"));
 
 function App() {
+  const { width } = useWindowSize();
+  console.log(width)
+  useEffect(() => {
+    window.location.hash = ""
+    AOS.init()
+  },[]);
+
+
   return (
     <div id="main-container">
-      <Row>
-          <Col xs={12}><Navbar /></Col>
-          <Wave />
-      </Row>
-      <Element name="home" id="home" className="element">
-        <Row>
-            <Col xs={12}> <HomePage /> </Col>
-        </Row>
-      </Element>
-      <Element name="about" id="about" className="element">
-        <Row>
-            <Col xs={12}> <AboutPage /> </Col>
-        </Row>
-      </Element>
-      <Element name="skills" id="skills" className="element">
-        <Row>
-            <Col xs={12}> <SkillsPage /> </Col>
-        </Row>
-      </Element>
-      <Element name="experience" id="experience" className="element">
-        <Row>
-            <Col xs={12}> <ExperiencePage /> </Col>
-        </Row>
-      </Element>
-      <Row>
-          <Col xs={12}> <Footer /> </Col>
-      </Row>
+        <Navbar />
+        <Wave />
+        <Suspense fallback={<ClipLoader color="#003967" css="display: block; margin: 0 auto"/>}>
+          <section className="element" name="home" id="home">
+            <HomePage /> 
+          </section>
+          <section className="element" name="about" id="about">
+              <AboutPage /> 
+          </section>
+          <section className="element" name="skills" id="skills">
+              <SkillsPage /> 
+          </section>
+          <section className="element" name="experience" id="experience">
+              <ExperiencePage /> 
+          </section>
+          <section className="element" name="education" id="education">
+              <EducationPage /> 
+          </section>
+          <section className="element" name="contact" id="contact">
+              <ContactPage /> 
+          </section>
+          <Footer />
+      </Suspense>
     </div>
   );
 }
