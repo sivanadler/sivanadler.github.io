@@ -6,9 +6,19 @@ import { Link } from 'react-router-dom'
 
 function Navbar(){
 
+
     const handleClick = (e, element) => {
         e.preventDefault();
        const foundElement = document.querySelector(`#${element}`)
+       const hamburger = document.querySelector(".hamburger");
+       const navMenu = document.querySelector(".nav-list");
+
+       if(hamburger){
+            //close hamburger on click of a nav link
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active")
+       }
+
        if(foundElement){
            foundElement.scrollIntoView({behavior: 'smooth'})
        }

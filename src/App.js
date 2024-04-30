@@ -3,11 +3,10 @@ import './App.css';
 import { ClipLoader } from 'react-spinners';
 import Footer from "./common/Footer";
 import Navbar from './common/Navbar'
-import Wave from './common/Wave';
 import "./statics/css/common.scss"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import useWindowSize from "./helpers/useWindowSize";
+import HamburgerNav from './common/HamburgerNav';
 
 const HomePage = lazy(() => import("./sections/HomePage"));
 const AboutPage = lazy(() => import("./sections/AboutPage"));
@@ -17,8 +16,7 @@ const EducationPage = lazy(() => import("./sections/EducationPage"));
 const ContactPage = lazy(() => import("./sections/ContactPage"));
 
 function App() {
-  const { width } = useWindowSize();
-  console.log(width)
+
   useEffect(() => {
     window.location.hash = ""
     AOS.init()
@@ -27,8 +25,10 @@ function App() {
 
   return (
     <div id="main-container">
+   
+        {/* <Wave /> */}
         <Navbar />
-        <Wave />
+        <HamburgerNav />
         <Suspense fallback={<ClipLoader color="#003967" css="display: block; margin: 0 auto"/>}>
           <section className="element" name="home" id="home">
             <HomePage /> 

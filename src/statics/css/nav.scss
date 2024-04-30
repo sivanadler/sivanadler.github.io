@@ -35,13 +35,15 @@ a.active {
     text-decoration: none !important;
 }
 
+.nav-list.active {
+    height: 100%;
+}
+
 .nav-title {
     cursor: pointer;
     display: inline-block !important;
     vertical-align: bottom !important;
-
 }
-
 
 a .nav-title:before, a .nav-title:after{
     opacity: 0;
@@ -82,131 +84,65 @@ a .nav-title:hover:before, a .nav-title:hover:after{
     transform: translateX(10px);
 }
 
+.hamburger {
+    display: none;
+}
 
-// /* NAV */
-// .nav-list {
-//     color: white;
-//     position: absolute;
-//     left: 0%;
-//     top: 0%;
-//     width: 100%;
-//     z-index: 1000;
-//     padding: 0;
-//     font-size: 20px !important;
-//     vertical-align: middle !important;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
 
-//     a {
-//         display: inline-block !important;
-//         margin: 1% 1.5%;
-//         text-decoration: none;
-//         transition: all ease-in-out .2s;
-//     }
-//     a.inactive {
-//         color: colors.$inactive-link !important;
-//     }
 
-//     a.active {
-//         color: colors.$active-link !important;
-//     }
+@media (max-width: breakpoints.$tablet) {
+    .nav-list {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        // background-color: #fff;
+        width: 100%;
+        // border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
 
-//     .icon {
-//         display: inline-block !important;
-//         font-size: 18px;
-//         // margin: 10% 0;
-//         display: none !important;
-//     }
-    
-//     .nav-title {
-//         display: inline-block !important;
-//         vertical-align: bottom !important;
+    }
 
-//     }
-    
+    .nav-list.active {
+        left: 0;
+    }
 
-//     a .nav-title:before, a .nav-title:after{
-//         opacity: 0;
-//         font-size: 25px;
-//         // margin: 0 5%;
-//         top: 0px;
-//         transition: all 0.3s;
-//     }
+    .main-nav-link {
+        width: 100% !important;
+        // margin: 2.5rem 0;
+    }
 
-//     a .nav-title:before{
-//         content: ' { ';
-//         left: 0px;
-//         transform: translateX(50px);
-//     }
+    .hamburger {
+        display: block !important;
+        text-align: right !important;
+        position: fixed !important;
+        right: 5%;
+        top: 5%;
+        cursor: pointer !important;
+        z-index: 3000 !important;
+    }
 
-//     a .nav-title:after{
-//         content: ' } ';
-//         right: 0px;
-//         transform: translateX(-50px);
-//     }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-//     a.active .nav-title:before {
-//         visibility: hidden;
-//     }
-//     a.active .nav-title:after {
-//         visibility: hidden;
-//     }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-//     a .nav-title:hover:before, a .nav-title:hover:after{
-//         opacity: 1;
-//         transform: translateX(10px);
-//     }
-// }
-
-// .justify-content-end.navbar-nav {
-//     background-color: colors.$darker-gray;
-//     width: 100% !important;
-//     display: flex;
-// }
-
-// .navbar-light .navbar-toggler {
-//     position: absolute;
-//     right: 0 !important;
-//     top: 0 !important;
-//     border: none;
-//     color: rgba(0,0,0,0)
-// }
-
-// .navbar-light .navbar-toggler.collapsed {
-//     position: absolute;
-//     right: 0 !important;
-//     top: 0 !important;
-//     border-color: colors.$darker-gray;
-//     outline: 0 !important;
-//     border: none !important;
-//     outline: none !important;
-//     background: none !important;
-//     transition: none !important;
-
-// }
-// .navbar-light .navbar-toggler.collapsed:focus {
-//     position: absolute;
-//     right: 0 !important;
-//     top: 0 !important;
-//     border: 0 !important;
-//     outline: none !important;
-//     background: none !important;
-//     box-shadow: 0 0 0 0rem !important;
-// }
-
-// @media (max-width: breakpoints.$tablet) {
-//     .navbar-collapse {
-//         width: 100% !important;
-//     }
-//     .nav-list {
-//         a.active, a.inactive{
-//             text-align: center;
-//         }
-//     }
-
-//     a:before, a:after{
-//         opacity: 0;
-//         font-size: 25px;
-//         margin: 0 5%;
-//         top: 0px;
-//         transition: all 0.3s;
-//     }
-// }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
