@@ -4,6 +4,7 @@
 .experience-header {
     color: colors.$darkest-gray;
     font-weight: bold;
+    margin-top: 1%;
 }
 
 .experience-subheader {
@@ -17,10 +18,9 @@
     font-weight: bold;
 }
 
-.experience-header-row {
-}
 
 .experience-bullet-row {
+    margin-bottom: 2%;
 
     ul {
         margin-left: 5%;

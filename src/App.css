@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+#background-pic {
+  fill: pink;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

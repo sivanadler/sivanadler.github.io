@@ -13,11 +13,11 @@ function EducationPage(props) {
                 <p className="date-to-float">Jan 2019 - Apr 2019</p>
                 <p className="experience-subheader">Full Stack Web Development</p>
                 </Col>
-            </Row>
-            <Row className="experience-bullet-row">
-                <ul>
-                    <li>Javascript, React, Redux, Ruby, Rails, SQL, PostgreSQL, HTML, CSS, Amazon Web Services (AWS)</li>
-                </ul>
+                <Row className="experience-bullet-row">
+                    <ul>
+                        <li>Javascript, React, Redux, Ruby, Rails, SQL, PostgreSQL, HTML, CSS, Amazon Web Services (AWS)</li>
+                    </ul>
+                </Row>
             </Row>
 
             <Row className="experience-header-row">

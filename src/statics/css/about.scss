@@ -1,6 +1,11 @@
 @use "./colors.scss";
 @use "./breakpoints.scss";
 
+
+.about {
+    z-index: 2000;
+}
+
 .brackets {
     font-size: 30px !important;
 }
@@ -8,10 +13,11 @@
 #about-img {
     // height: 300px;
     width: 100%;
-    box-shadow: 0 10px 30px -15px black;
+    // box-shadow: 0 10px 30px -15px black;
     border-radius: 10px;
     border: 0px;
-    display: inline !important;
+    // display: inline !important;
+    z-index: 3000 !important;
 }
 
 .hobbies-row {
@@ -29,15 +35,6 @@
 }
 
 #about-me-desc {
-    margin-top: 2%;
-    text-align: justify;
-    background-color: rgba(255,255,255, 0.7);
-    box-shadow: 0 10px 30px -15px colors.$darker-gray;
-    border-radius: 10px;
-    padding: 2%;
-    width: 100%;
-    font-size: 14px;
-
     p {
         padding-top: 2%;
     }

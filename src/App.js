@@ -6,6 +6,7 @@ import Navbar from './common/Navbar'
 import "./statics/css/common.scss"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Wave from './common/Wave'
 import HamburgerNav from './common/HamburgerNav';
 
 const HomePage = lazy(() => import("./sections/HomePage"));
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div id="main-container">
+      <Wave />
         <Navbar />
         <HamburgerNav />
         <Suspense fallback={<ClipLoader color="#003967" css="display: block; margin: 0 auto"/>}>

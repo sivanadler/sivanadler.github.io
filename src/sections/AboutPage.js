@@ -3,6 +3,7 @@ import "../statics/css/about.scss";
 import "../statics/css/common.scss";
 import { Row, Col } from "react-bootstrap";
 import sivan from "../statics/images/sivan.jpg";
+import WhitePane from "../common/WhitePane";
 import {
   FaPizzaSlice,
   FaPaw,
@@ -13,7 +14,7 @@ import { MdPlace } from "react-icons/md";
 
 function AboutPage(props) {
 
-  const content = (
+  const textContent = (
       <p>
       Hello! My name is Sivan and I enjoy building and designing Web
       Applications. My interest in Web Development started a couple of years ago
@@ -34,18 +35,11 @@ function AboutPage(props) {
     </p>
   );
 
-
-  return (
-    <div className="about">
-    <div className="section-container">
-      <Row className="animate__animated animate__slideInLeft animate__slower">
-        <Col className="header"> {'[  '}About Me{'  ]'}</Col>
-      </Row>
-      <div id="about-me-desc">
-
+  const content = (
+    <div id="about-me-desc">
       <Row>
         <Col xs={12} sm={12} md={4} lg={4} xl={4}>
-          <img id="about-img" src={sivan} alt="Sivan Adler" />
+          <span><img id="about-img" src={sivan} alt="Sivan Adler" /></span>
         </Col>
         <Col  xs={12} sm={12} md={8} lg={8} xl={8} className="animate__animated animate__slideInLeft animate__slower">
           <Row className="hobbies-row">
@@ -85,16 +79,26 @@ function AboutPage(props) {
           </Row>
           <Row>
             <Col  xs={12} s={12} m={12} l={12} xl={12}>
-              {content}
+              {textContent}
             </Col>
           </Row>
-     
+    
           
         </Col>
       </Row>
-      </div>
-
     </div>
+  )
+  
+
+
+  return (
+    <div className="about">
+      <div className="section-container">
+        <Row className="animate__animated animate__slideInLeft animate__slower">
+          <Col className="header"> {'[  '}About Me{'  ]'}</Col>
+        </Row>
+        <WhitePane content={content}/>
+      </div>
     </div>
   );
 }
