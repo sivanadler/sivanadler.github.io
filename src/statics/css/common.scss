@@ -41,8 +41,6 @@ html, body {
 .element {
     text-align: center;
     padding: 0;
-    width: 100vw !important;
-    height: 100vh;
     font-family: 'Roboto Slab', serif !important;
     display: block !important;
 }
@@ -50,7 +48,7 @@ html, body {
 .section-container {
     margin: 8% 5% 1% 5%;
     // width: 100% !important;
-    height: 100vh;
+    // height: 100vh;
     text-align: center !important;
 }
 

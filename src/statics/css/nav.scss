@@ -98,8 +98,6 @@ a .nav-title:hover:before, a .nav-title:hover:after{
     background-color: #101010;
 }
 
-
-@media (max-width: breakpoints.$tablet) {
     .nav-list {
         position: fixed;
         left: -100%;
@@ -145,4 +143,3 @@ a .nav-title:hover:before, a .nav-title:hover:after{
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}

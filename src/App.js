@@ -25,8 +25,6 @@ function App() {
 
   return (
     <div id="main-container">
-   
-        {/* <Wave /> */}
         <Navbar />
         <HamburgerNav />
         <Suspense fallback={<ClipLoader color="#003967" css="display: block; margin: 0 auto"/>}>

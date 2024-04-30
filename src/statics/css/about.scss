@@ -5,39 +5,21 @@
     font-size: 30px !important;
 }
 
-#image-wrapper {
-    background-color: colors.$light-pink;
-    border: 5px solid colors.$darker-pink;
-    height: 55vh;
-    width: 325px;
-    border-radius: 10px;
-    position: relative;
-}
-
 #about-img {
-    height: 55vh !important;
-    width: 325px;
+    // height: 300px;
+    width: 100%;
     box-shadow: 0 10px 30px -15px black;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    display: block;
-    position: relative;
     border-radius: 10px;
     border: 0px;
-    transform: translate(-30px, -30px);
-
-}
-
-#about-img:hover{
-    transform: translate(-20px, -20px);
+    display: inline !important;
 }
 
 .hobbies-row {
-    padding: 0 0 2% 0;
+    // padding: 0 0 2% 0;
     width: 100%;
 
     .col {
         text-align: left;
-        font-size: 18px;
     }
 }
 
@@ -48,14 +30,17 @@
 
 #about-me-desc {
     margin-top: 2%;
-    width: 90%;
     text-align: justify;
     background-color: rgba(255,255,255, 0.7);
     box-shadow: 0 10px 30px -15px colors.$darker-gray;
     border-radius: 10px;
     padding: 2%;
-    // height: 300px;
-    // overflow: scroll;
+    width: 100%;
+    font-size: 14px;
+
+    p {
+        padding-top: 2%;
+    }
 }
 
 .strong {
@@ -65,22 +50,17 @@
 
 
 
-// @media (max-width:breakpoints.$laptop-1000) {
-//     #about-me-desc {
-//         height: 525px !important;
-//     }
-// }
 
-// @media (max-width:breakpoints.$tablet) {
-//     #about-me-desc {
-//         margin-top: 5% !important;
-//         font-size: 14px !important;
-//     }
+@media (max-width:breakpoints.$tablet) {
+    #about-me-desc {
+        font-size: 14px !important;
+        text-align: center !important;
+    }
     
-//     .brackets {
-//         font-size: 25px !important;
-//     }
-// }
+    .brackets {
+        font-size: 25px !important;
+    }
+}
 
 // @media (max-width:breakpoints.$tablet-min) {
 //     .brackets {
