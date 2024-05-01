@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "https://sivanadler.github.io/static/css/main.84079012.css",
-    "main.js": "https://sivanadler.github.io/static/js/main.f9a33f30.js",
+    "main.css": "https://sivanadler.github.io/static/css/main.b7cfeb24.css",
+    "main.js": "https://sivanadler.github.io/static/js/main.25c7b5da.js",
     "static/js/971.eb6d3c93.chunk.js": "https://sivanadler.github.io/static/js/971.eb6d3c93.chunk.js",
-    "static/css/963.1ec657ac.chunk.css": "https://sivanadler.github.io/static/css/963.1ec657ac.chunk.css",
-    "static/js/963.bc218525.chunk.js": "https://sivanadler.github.io/static/js/963.bc218525.chunk.js",
+    "static/css/963.d2fad3d4.chunk.css": "https://sivanadler.github.io/static/css/963.d2fad3d4.chunk.css",
+    "static/js/963.25828de5.chunk.js": "https://sivanadler.github.io/static/js/963.25828de5.chunk.js",
     "static/css/335.94dde526.chunk.css": "https://sivanadler.github.io/static/css/335.94dde526.chunk.css",
     "static/js/335.1ecbc30a.chunk.js": "https://sivanadler.github.io/static/js/335.1ecbc30a.chunk.js",
     "static/css/54.3a7d5d69.chunk.css": "https://sivanadler.github.io/static/css/54.3a7d5d69.chunk.css",
@@ -19,11 +19,11 @@
     "static/js/856.47782612.chunk.js": "https://sivanadler.github.io/static/js/856.47782612.chunk.js",
     "static/media/sivan.jpg": "https://sivanadler.github.io/static/media/sivan.c700818ece92863abf92.jpg",
     "index.html": "https://sivanadler.github.io/index.html",
-    "main.84079012.css.map": "https://sivanadler.github.io/static/css/main.84079012.css.map",
-    "main.f9a33f30.js.map": "https://sivanadler.github.io/static/js/main.f9a33f30.js.map",
+    "main.b7cfeb24.css.map": "https://sivanadler.github.io/static/css/main.b7cfeb24.css.map",
+    "main.25c7b5da.js.map": "https://sivanadler.github.io/static/js/main.25c7b5da.js.map",
     "971.eb6d3c93.chunk.js.map": "https://sivanadler.github.io/static/js/971.eb6d3c93.chunk.js.map",
-    "963.1ec657ac.chunk.css.map": "https://sivanadler.github.io/static/css/963.1ec657ac.chunk.css.map",
-    "963.bc218525.chunk.js.map": "https://sivanadler.github.io/static/js/963.bc218525.chunk.js.map",
+    "963.d2fad3d4.chunk.css.map": "https://sivanadler.github.io/static/css/963.d2fad3d4.chunk.css.map",
+    "963.25828de5.chunk.js.map": "https://sivanadler.github.io/static/js/963.25828de5.chunk.js.map",
     "335.94dde526.chunk.css.map": "https://sivanadler.github.io/static/css/335.94dde526.chunk.css.map",
     "335.1ecbc30a.chunk.js.map": "https://sivanadler.github.io/static/js/335.1ecbc30a.chunk.js.map",
     "54.3a7d5d69.chunk.css.map": "https://sivanadler.github.io/static/css/54.3a7d5d69.chunk.css.map",
@@ -37,7 +37,7 @@
     "856.47782612.chunk.js.map": "https://sivanadler.github.io/static/js/856.47782612.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84079012.css",
-    "static/js/main.f9a33f30.js"
+    "static/css/main.b7cfeb24.css",
+    "static/js/main.25c7b5da.js"
   ]
 }
