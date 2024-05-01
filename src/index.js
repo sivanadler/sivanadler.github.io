@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './statics/css/home.scss';
 import 'animate.css';
@@ -12,12 +12,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Route exact path="/" render={ (routerProps) => {
           document.title = `Sivan Adler`
           return <App {...routerProps}/>
       }} />
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>
 );
