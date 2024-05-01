@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <Route exact path="/" render={ (routerProps) => {
           document.title = `Sivan Adler`
           return <App {...routerProps}/>
