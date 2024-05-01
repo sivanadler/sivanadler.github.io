@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='sivanadler.github.io'>
       <Route exact path="/" render={ (routerProps) => {
           document.title = `Sivan Adler`
           return <App {...routerProps}/>
